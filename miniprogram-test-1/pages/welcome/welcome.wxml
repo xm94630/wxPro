@@ -1,0 +1,8 @@
+<view class="container">
+  <image class="user-avatar" src="/images/avatar.png"></image>
+  <text class="user-name">你好，白衣博腾</text>
+  <view class="moto-container" bindtap="onTap">
+    <text class="moto">花开花落花满天</text>
+  </view>
+</view>
+

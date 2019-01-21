@@ -1,0 +1,18 @@
+<import src="posts-item/posts-item-template.wxml" />
+
+<swiper indicator-dots="true" autoplay="true" interval="3000">
+  <swiper-item>
+    <image src='/images/1.jpeg'></image>
+  </swiper-item>
+  <swiper-item>
+    <image src='/images/2.jpeg'></image>
+  </swiper-item>
+  <swiper-item>
+    <image src='/images/3.jpeg'></image>
+  </swiper-item>
+</swiper>
+
+<!-- wx:key 解决警告用的 -->
+<block wx:for="{{posts_key}}" wx:for-item="item" wx:for-index="idx" wx:key="posts_key">
+  <template is="myTemplate" data="{{...item}}"/>
+</block>
