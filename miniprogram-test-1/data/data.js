@@ -7,6 +7,7 @@ var local_database = [
     "content": "这里风景很不错啊",
     "view_num": "123",
     "collect_num": "99",
+    "postId":0,
   },
   {
     "date": "2020",
@@ -16,6 +17,7 @@ var local_database = [
     "content": "我也很想去哦",
     "view_num": "38",
     "collect_num": "85",
+    "postId": 1,
   },
 ]
 

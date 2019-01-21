@@ -14,5 +14,7 @@
 
 <!-- wx:key 解决警告用的 -->
 <block wx:for="{{posts_key}}" wx:for-item="item" wx:for-index="idx" wx:key="posts_key">
-  <template is="myTemplate" data="{{...item}}"/>
+  <view bindtap="onPostTap" data-postId="{{item.postId}}">
+    <template is="myTemplate" data="{{...item}}"/>
+  </view>
 </block>
