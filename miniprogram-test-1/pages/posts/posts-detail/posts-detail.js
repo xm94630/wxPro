@@ -1,6 +1,12 @@
 var myData = require("../../../data/data.js")
+var app = getApp();
 Page({
+  data:{
+    isPlayingMusic:false
+  },
   onLoad: function(opts) {
+    
+    var globalData = app.globalData;
     var id = opts.id;
     
     this.setData({
@@ -24,6 +30,30 @@ Page({
       wx.setStorageSync("postCollected", postCollected)
     }
 
+    if (app.globalData.g_isPlayingMusic && app.globalData.g_currentMusicPostId === id){
+      this.setData({
+        isPlayingMusic:true
+      })
+    }
+    this.setMusicMonitor()
+  },
+
+  setMusicMonitor(){
+    var that = this;
+    wx.onBackgroundAudioPlay(function () {
+      that.setData({
+        isPlayingMusic: true
+      })
+      app.globalData.g_isPlayingMusic = true;
+      app.globalData.g_currentMusicPostId = that.data.id;
+    });
+    wx.onBackgroundAudioPause(function () {
+      that.setData({
+        isPlayingMusic: false
+      })
+      app.globalData.g_isPlayingMusic = false;
+      app.globalData.g_currentMusicPostId = null;
+    });
   },
 
   onCollectionTap: function (event) {
@@ -56,6 +86,27 @@ Page({
         })
       }
     })
+  },
+
+  onMusicTap:function(event){
+    var postData = this.data.postData
+    var isPlayingMusic = this.data.isPlayingMusic;
+    if(isPlayingMusic){
+      wx.stopBackgroundAudio();
+      this.setData({
+        isPlayingMusic: false
+      })
+    }else{
+      wx.playBackgroundAudio({
+        dataUrl: postData.music.url,
+        title: postData.music.title,
+        coverImgUrl: postData.music.coverImg
+      })
+      this.setData({
+        isPlayingMusic: true
+      })
+    }
+
   }
 
 })
