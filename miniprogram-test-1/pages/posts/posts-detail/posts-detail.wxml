@@ -1,5 +1,6 @@
 <view class="container">
   <image class="head-image" src="/images/1.jpeg"></image>
+  <image class="audio" src="/images/music/play.png"></image>
   <view class="author-date">
     <image class="avatar" src="/images/icon/avatar.png"></image>
     <text class="author">独孤前辈</text>
