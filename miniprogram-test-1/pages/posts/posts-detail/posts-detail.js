@@ -41,5 +41,21 @@ Page({
       collected: collect
     })
 
+    wx.showToast({
+      title: collect?"收藏成功":"取消成功"
+    })
+
   },
+  onShowTap:function(){
+    wx.showActionSheet({
+      itemList: ["分享到微博","分享到微信"],
+      success:function(res){
+        var index = res.tapIndex;
+        wx.showToast({
+          title: '还不支持哦'
+        })
+      }
+    })
+  }
+
 })

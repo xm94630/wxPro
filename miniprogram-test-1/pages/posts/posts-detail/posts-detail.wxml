@@ -12,8 +12,8 @@
     <view class="circle-img">
       <image wx:if="{{collected}}" catchtap="onCollectionTap" class="share-image" src="/images/icon/sellected.png"></image>
       <image wx:else catchtap="onCollectionTap"  class="share-image" src="/images/icon/unsellected.png"></image>
-      <image wx:if="{{shared}}" class="share-image" src="/images/icon/share.png"></image>
-      <image wx:else class="share-image" src="/images/icon/unshared.png"></image>
+      <image catchtap="onShowTap" wx:if="{{shared}}" class="share-image" src="/images/icon/share.png"></image>
+      <image catchtap="onShowTap" wx:else class="share-image" src="/images/icon/share.png"></image>
     </view>
     <view class="horizon"></view>
   </view>
