@@ -7,6 +7,10 @@ var local_database = [
     "content": "这里风景很不错啊",
     "view_num": "123",
     "collect_num": "99",
+    "headImgSrc":"/images/1.jpeg",
+    "author":"林白衣",
+    "dateTime":"24小时前",
+    "detail":"我可是正文，啊哈哈哈",
     "postId":0,
   },
   {
@@ -17,6 +21,10 @@ var local_database = [
     "content": "我也很想去哦",
     "view_num": "38",
     "collect_num": "85",
+    "headImgSrc": "/images/2.jpeg",
+    "author": "林白衣",
+    "dateTime": "1年前",
+    "detail": "你呀猜猜我是谁",
     "postId": 1,
   },
 ]

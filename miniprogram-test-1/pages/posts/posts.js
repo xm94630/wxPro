@@ -18,9 +18,8 @@ Page({
 
   onPostTap:function(event){
     var id = event.currentTarget.dataset.postid;
-    console.log(id)
     wx.navigateTo({
-      url: '/pages/posts/posts-detail/posts-detail',
+      url: '/pages/posts/posts-detail/posts-detail?id='+id,
     })
   }
 
