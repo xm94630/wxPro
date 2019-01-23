@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/movies/movies",
     "pages/posts/posts",
     "pages/welcome/welcome",
     "pages/posts/posts-detail/posts-detail"
@@ -9,5 +10,23 @@
   },
   "requiredBackgroundModes": [
     "audio"
-  ]
+  ],
+  "tabBar": {
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/movies/movies",
+        "text": "电影",
+        "iconPath": "images/icon/movie2.png",
+        "selectedIconPath": "images/icon/movie.png"
+      },
+      {
+        "pagePath": "pages/posts/posts",
+        "text": "文章",
+        "iconPath": "images/icon/read2.png",
+        "selectedIconPath": "images/icon/read.png"
+      }
+    ]
+  }
 }
