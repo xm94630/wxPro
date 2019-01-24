@@ -1,9 +1,11 @@
+var util = require('../../utils/util.js');
+
 var app=getApp();
 
 Page({
 
   data: {
-    inTheaters:{},
+    inTheaters:{},//注意，这里要写这个啊，不然绑定的时候，就会出错，这是个坑
     comingSoon:{},
     top250:{}
   },
@@ -48,6 +50,7 @@ Page({
         title = title.substring(0,6)+"...";
       }
       var temp= {
+        stars:util.converToStarsArray(subject.rating.stars),
         title:title,
         average:subject.rating.average,
         coverageUrl:subject.images.large,
