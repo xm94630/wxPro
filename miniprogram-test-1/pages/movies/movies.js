@@ -6,7 +6,10 @@ Page({
   data: {
     inTheaters:{},//注意，这里要写这个啊，不然绑定的时候，就会出错，这是个坑
     comingSoon:{},
-    top250:{}
+    top250:{},
+    searchResult:{},
+    containerShow:true,
+    searchPanelShow:false
   },
 
   onLoad: function (options) {
@@ -46,6 +49,27 @@ Page({
 
       }
     })
+  },
+
+  onCancelImgTap:function(){
+    this.setData({
+      containerShow: true,
+      searchPanelShow: false,
+      //searchResult:{}
+    })
+  },
+
+  onBindFocus:function(){
+    this.setData({
+      containerShow:false,
+      searchPanelShow:true
+    })
+  },
+  onBindChange:function(event){
+    var text = event.detail.value;
+    var searchUrl = app.globalData.doubanBase+"/v2/movie/search?q="+text;
+    this.getMovieListData(searchUrl, "searchResult", "");
+
   },
 
   processDoubanData: function (moviesDouban, settedKey, categoryTitle){
