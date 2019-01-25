@@ -18,7 +18,7 @@ Page({
         //注意，这里是假数据，数据有限，我就少获取下，每次7条（默认20条）
         var dataUrl = app.globalData.doubanBase + "/v2/movie/in_theaters?count=7";
         break;
-      case "即将上映":
+      case "即将上演":
         var dataUrl = app.globalData.doubanBase + "/v2/movie/coming_soon?count=7";
         break;
       case "豆瓣Top250":
