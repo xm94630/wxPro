@@ -23,12 +23,18 @@ Page({
 
   },
 
+  onMovieTap:function(event){
+    var movieId = event.currentTarget.dataset.movieid;
+    wx.navigateTo({
+      url: 'movie-detail/movie-detail?id=' + movieId
+    })
+  },
+
   onMoreTap:function(event){
     var category = event.currentTarget.dataset.category;
     wx.navigateTo({
       url: 'more-movie/more-movie?category=' + category
     })
-
   },
 
   getMovieListData:function(url,settedKey,categoryTitle){
