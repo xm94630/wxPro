@@ -41,9 +41,17 @@ Page({
       castInfo: util.convertToCastInfos(data.casts),
       summary:data.summary
     }
-    console.log(movie)
     this.setData({
       movie:movie
+    })
+  },
+
+  //注意，这个功能在本地不能看！需要真机环境
+  viewMoviePostImg:function(e){
+    var src = e.currentTarget.dataset.src;
+    wx.previewImage({
+      current: src,
+      urls: [src]
     })
   }
 })
