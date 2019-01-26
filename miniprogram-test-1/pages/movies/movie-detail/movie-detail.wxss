@@ -57,13 +57,14 @@
 }
 
 .summary{
+  font-size: 28rpx;
   margin-left:40rpx;
   margin-top:40rpx;
   color:#777;
 }
 .original-title{
   color:#1f3463;
-  font-size:24rpx;
+  font-size:28rpx;
   font-weight:blod;
   margin-bottom:40rpx;
 }
@@ -90,8 +91,9 @@
   margin-top:50rpx;
 }
 .summary-content{
+  font-size: 28rpx;
   margin-top:20rpx;
-  margin-left:40rpx;
+  margin-right:20rpx;
   line-height:40rpx;
   letter-spacing:1px;
 }

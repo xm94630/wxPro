@@ -23,7 +23,7 @@
   <image class="movie-img" src="{{movie.movieImg}}"></image>
 
   <view class="summary">
-    <view class="origin-title">
+    <view class="original-title">
       <text>{{movie.originalTitle}}</text>
     </view>
     <view class="flex-row">
@@ -57,7 +57,7 @@
     <scroll-view class="casts-imgs" scroll-x="true" style="width:100%">
       <block wx:for="{{movie.castInfo}}" wx:for-item="item">
         <view class="cast-container">
-          <image class="caast-img" src="{{item.img}}"></image>
+          <image class="cast-img" src="{{item.img}}"></image>
           <text class="cast-name">{{item.name}}</text>
         </view>
       </block>
