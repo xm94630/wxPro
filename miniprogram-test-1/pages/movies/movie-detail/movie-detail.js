@@ -27,11 +27,11 @@ Page({
     }
     var movie={
       movieImg:data.images?data.images.large:"",
-      country:data.title,
+      country: data.countries,
       title:data.title,
-      originaltitle:data.original_title,
+      originalTitle:data.original_title,
       wishCount:data.wish_count,
-      commentCount:data.comment_count,
+      commentCount: data.comments_count,
       year:data.year,
       genres:data.genres.join('、'),
       stars:util.convertToStarsArray(data.rating.stars),
