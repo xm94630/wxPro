@@ -18,16 +18,16 @@
     "position": "bottom",
     "list": [
       {
-        "pagePath": "pages/movies/movies",
-        "text": "电影",
-        "iconPath": "images/icon/movie2.png",
-        "selectedIconPath": "images/icon/movie.png"
-      },
-      {
         "pagePath": "pages/posts/posts",
         "text": "文章",
         "iconPath": "images/icon/read2.png",
         "selectedIconPath": "images/icon/read.png"
+      },
+      {
+        "pagePath": "pages/movies/movies",
+        "text": "电影",
+        "iconPath": "images/icon/movie2.png",
+        "selectedIconPath": "images/icon/movie.png"
       }
     ]
   }
