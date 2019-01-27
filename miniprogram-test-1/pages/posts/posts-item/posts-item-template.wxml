@@ -2,7 +2,7 @@
   <view class="post-containter">
     <view class="post-author-date">
       <image class="post-author" src="{{author_img}}"></image>
-      <text class="post-date">【{{idx}}】{{date}}</text>
+      <text class="post-date">{{date}}</text>
     </view>
     <text class="post-title">{{title}}</text>
     <image class="post-image" src="{{post_img}}"></image>
